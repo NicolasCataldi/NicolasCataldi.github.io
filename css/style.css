@@ -23,28 +23,29 @@ header{
 }
 
 .nav-logo{
-    width: 5.3%;
-    height: 90%;
+    width: 4.792vw;
+    height: 10.2vh;
     margin-left: 2%;
 }
 
 img{
     width: 100%;
-    height: 92%;
-    object-fit: contain;
+    height: 100%;
+    object-fit: fill;
 }
 
-.nav-logo img{
-    border: 5px solid #dedfde3a;
-    border-radius: 50%; /* Esto crea un borde redondo para la imagen redonda existente */
+.nav-logo{
+    border: 4px solid #dedfde3a;
+    border-radius: 50%;
 }
 
-.nav-logo img:hover{
-    border: solid #6ae9f5 3px;
+.nav-logo:hover{
+    animation:outline-celeste-azul-logo 1s infinite;
+    border-radius: 50%;
 }
 
 .nav-margen{
-    width: 79%;
+    width: 76%;
     height: 100%;
 }
 
@@ -56,7 +57,7 @@ img{
 
 .nav-hora-letras{
     margin-left: 1%;
-    font-size: 95%;
+    font-size: 1vw;
     bottom: 10%;
 }
 
@@ -64,17 +65,28 @@ img{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     user-select: none;
+    font-size: 1.3vw;
 }
+
+
 
 .nav-wifi{
     margin-left: 1.2%;
     margin-right: 1.2%;
 }
 
+.nav-battery img{
+    width: 3.1vw;
+}
+
+.nav-wifi img{
+    width: 2.2vw;
+}
+
 main{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     height: calc(100vh - 26vh);
     align-items: center;
 }
@@ -82,8 +94,8 @@ main{
 .main-tarjetas{
     display: flex;
     flex-direction: row;
-    width: 90%;
-    height: 80%;
+    width: 90vw;
+    height: 80vh;
     gap: 4%;
     justify-content: center;
     align-items: center;
@@ -116,11 +128,26 @@ article img{
     height: 50%;
     text-align: center;
     justify-content: end;
-    font-size: 200%;
+    font-size: 2.7vw;
     color: #FFF;
     text-shadow: 0.7px 1px 1px #c9cac9;
     user-select: none;
 }
+
+    
+@keyframes portfolio {
+    0% {color: #FFF;}
+    50% {color: #ffcf40;}
+    100% {color: #FFF;}
+}
+
+.tarjeta-1 a:hover{
+    animation:portfolio 1s infinite;
+    
+}
+
+
+    
 
 .tarjeta-1-img{
     margin-top: 35%;
@@ -132,9 +159,20 @@ article img{
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(334deg) brightness(104%) contrast(100%);
 }
 
+@keyframes outline-celeste-azul {
+    0% {outline: solid #6ae9f5 4px;}
+    50% {outline: solid #23bcbb 4px;}
+    100% {outline: solid #6ae9f5 4px;}
+    }
+
+@keyframes outline-celeste-azul-logo {
+        0% {border: solid #6ae9f5 4px;}
+        50% {border: solid #23bcbb 4px;}
+        100% {border: solid #6ae9f5 4px;}
+    }
 
 article:hover{
-    border: solid #6ae9f5 3px;
+    animation:outline-celeste-azul 1s infinite;
 }
 
 .main-botones{
@@ -148,8 +186,8 @@ article:hover{
 }
 
 .main-botones article{
-    width: 6.3%;
-    height: 80%;
+    width: 4.8vw;
+    height: 10vh;
     border-radius: 50px;
     justify-content: center;
     align-items: center;
@@ -158,9 +196,9 @@ article:hover{
 
 .main-botones article img{
     width: 100%;
-    height: 60%;
+    height: 70%;
     object-fit: contain;
-    margin-top: 20%;
+    margin-top: 15%;
 }
 
 .img-github{
