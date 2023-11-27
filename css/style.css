@@ -39,9 +39,26 @@ img{
     border-radius: 50%;
 }
 
+@keyframes border-celeste-azul-logo {
+    0% {border: solid #6ae9f5 4px;}
+    50% {border: solid #23bcbb 4px;}
+    100% {border: solid #6ae9f5 4px;}
+}
+
+@keyframes border-celeste-azul-fade {
+    0% {border: solid #23bcbb 4px;}
+    50% {border: solid #6ae9f5 4px;}
+    100% {border: solid #FFF 4px;}
+}
+
+
 .nav-logo:hover{
-    animation:outline-celeste-azul-logo 1s infinite;
+    animation:border-celeste-azul-logo 1s infinite;
     border-radius: 50%;
+}
+
+.nav-logo:not(:hover) {
+    animation:border-celeste-azul-fade 1s forwards;
 }
 
 .nav-margen{
@@ -159,20 +176,37 @@ article img{
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(334deg) brightness(104%) contrast(100%);
 }
 
+
+
 @keyframes outline-celeste-azul {
     0% {outline: solid #6ae9f5 4px;}
     50% {outline: solid #23bcbb 4px;}
     100% {outline: solid #6ae9f5 4px;}
     }
 
-@keyframes outline-celeste-azul-logo {
-        0% {border: solid #6ae9f5 4px;}
-        50% {border: solid #23bcbb 4px;}
-        100% {border: solid #6ae9f5 4px;}
+@keyframes outline-celeste-azul-fade {
+    0% {outline: solid #23bcbb 4px;}
+    50% {outline: solid #6ae9f5 4px;}
+    100% {outline: solid #FFF 4px;}
     }
+
 
 article:hover{
     animation:outline-celeste-azul 1s infinite;
+}
+
+article:not(:hover) {
+    animation:outline-celeste-azul-fade 1s forwards;
+}
+
+
+article {
+    transition: outline 1s ease;
+    outline: solid #FFF 4px;
+}
+
+article:not(:hover) {
+    outline: solid #FFF 4px; /* Establece el contorno predeterminado cuando no está en hover */
 }
 
 .main-botones{
