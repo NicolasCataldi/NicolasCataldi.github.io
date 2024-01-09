@@ -1,4 +1,3 @@
-
 // Mensaje de cerrado
 
 var disponibleCheck = false
@@ -22,7 +21,7 @@ function disponible(){
     }
     
     if(cerrado == false){
-        if(hour > 20 || hour < 8){
+        if(hour >= 20 || hour <= 8){
             cerrado = true
         }
     }
