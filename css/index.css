@@ -113,7 +113,6 @@ header a:hover{
 #info .container{
     text-align: center;
     padding: 120px 12px;
-    border-bottom: solid 2px rgba(0, 0, 0, 0.5);
 }
 
 .color-acento{
@@ -189,10 +188,6 @@ header a:hover{
 
 @media (min-width: 1280px) {
 
-    header{
-        position: fixed;
-        width: 100%;
-    }
     
     header .container{
         flex-direction: row;
@@ -263,10 +258,6 @@ header a:hover{
 
 @media (min-width: 2048px) {
 
-    header{
-        position: fixed;
-        width: 100%;
-    }
     
     header .container{
         flex-direction: row;

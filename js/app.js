@@ -1,4 +1,3 @@
-/* 
 // Mensaje de cerrado
 
 var disponibleCheck = false
@@ -51,4 +50,3 @@ function disponible(){
 }
 
 window.onload = disponible()
- */
